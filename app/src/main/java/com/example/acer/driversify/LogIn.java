@@ -23,7 +23,7 @@ public class LogIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-        mAuth = FirebaseAuth.getInstance();
+       mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
@@ -43,6 +43,7 @@ public class LogIn extends AppCompatActivity {
 
         String username=mEdit.getText().toString();
         String password= pass.getText().toString();
+
         mAuth.signInWithEmailAndPassword(username, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -50,6 +51,7 @@ public class LogIn extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("4ITF", "signInWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
 
                             Intent i = new Intent(getBaseContext(), ReportDriver.class);
                             startActivity(i);
@@ -59,6 +61,8 @@ public class LogIn extends AppCompatActivity {
                             Toast.makeText(LogIn.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
+
+                        // ...
                     }
                 });
     }
