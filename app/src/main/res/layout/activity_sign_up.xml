@@ -56,7 +56,7 @@
         app:layout_constraintVertical_bias="0.292" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/etFName"
         android:layout_width="231dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -65,7 +65,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="First Name"
+        android:hint="First Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -74,7 +74,7 @@
         app:layout_constraintVertical_bias="0.39" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/etLName"
         android:layout_width="231dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -83,7 +83,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Last Name"
+        android:hint="Last Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -92,7 +92,7 @@
         app:layout_constraintVertical_bias="0.481" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/etPNumber"
         android:layout_width="231dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -101,7 +101,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Plate Number"
+        android:hint="Plate Number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -119,7 +119,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Email"
+        android:hint="Email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -137,7 +137,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Confirm Password"
+        android:hint="Confirm Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -155,7 +155,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Password"
+        android:hint="Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"

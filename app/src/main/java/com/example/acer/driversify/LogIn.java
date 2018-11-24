@@ -44,27 +44,34 @@ public class LogIn extends AppCompatActivity {
         String username=mEdit.getText().toString();
         String password= pass.getText().toString();
 
-        mAuth.signInWithEmailAndPassword(username, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("4ITF", "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+        if(username == null || password == null){
+            Toast.makeText(LogIn.this, "Enter credentials...",
+                    Toast.LENGTH_SHORT).show();
+        }
 
-                            Intent i = new Intent(getBaseContext(), ReportDriver.class);
-                            startActivity(i);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w("4ITF", "signInWithEmail:failure", task.getException());
-                            Toast.makeText(LogIn.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+        else {
+            mAuth.signInWithEmailAndPassword(username, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d("4ITF", "signInWithEmail:success");
+                                FirebaseUser user = mAuth.getCurrentUser();
+
+                                Intent i = new Intent(getBaseContext(), ReportDriver.class);
+                                startActivity(i);
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w("4ITF", "signInWithEmail:failure", task.getException());
+                                Toast.makeText(LogIn.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+
+                            // ...
                         }
-
-                        // ...
-                    }
-                });
+                    });
+        }
     }
 
     public void signup(View v){

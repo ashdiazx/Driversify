@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "827783471656",
+    "firebase_url": "https://driversify-588a6.firebaseio.com",
+    "project_id": "driversify-588a6",
+    "storage_bucket": "driversify-588a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827783471656:android:68512af9b781fc32",
+        "android_client_info": {
+          "package_name": "com.example.acer.driversify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827783471656-ruebp9g75a7co9b0ivk2d75ehfnd66oh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acer.driversify",
+            "certificate_hash": "655e65959ac52dd96ec815e13606c5d3c6129a2b"
+          }
+        },
+        {
+          "client_id": "827783471656-1be9psas56m6avqg5sc5h52vtstiu655.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acer.driversify",
+            "certificate_hash": "69aef7a97d896bbe8cc7bf6ae57b157c747b7984"
+          }
+        },
+        {
+          "client_id": "827783471656-jqlqah8pg3sudf0j2blpbcqrc2jvenar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnj_7Nc8C5oBmlVLtA1NJ4s9GI5FzK28c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827783471656-jqlqah8pg3sudf0j2blpbcqrc2jvenar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
