@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp">
+    tools:context=".SignUp"
+    android:background="#ffffff">
 
     <Button
         android:id="@+id/btnSignUp"
@@ -16,6 +17,10 @@
         android:layout_marginTop="8dp"
         android:onClick="signup"
         android:text="Sign Up"
+        android:background="#08AF9E"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +53,7 @@
         android:layout_marginTop="8dp"
         android:text="Driversify"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"

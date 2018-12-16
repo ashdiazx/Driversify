@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReportDriver3 extends AppCompatActivity {
-    TextView tPlateNum, tViolation, tStatement;
+    TextView tPlateNum, tViolation, tStatement, eName;
     private FirebaseAuth mAuth;
 
 
@@ -29,6 +29,12 @@ public class ReportDriver3 extends AppCompatActivity {
         tPlateNum = findViewById(R.id.txtPlateNum);
         tViolation = findViewById(R.id.txtViolation);
         tStatement = findViewById(R.id.txtStatement);
+
+        eName = findViewById(R.id.txtname);
+
+        SharedPreferences pref1 = getSharedPreferences("name", MODE_PRIVATE);
+        String name = pref1.getString("name", null);
+        eName.setText("Hello, " + name);
 
         SharedPreferences pref = getSharedPreferences("Page1", MODE_PRIVATE);
         String platenumber = pref.getString("plate", null);

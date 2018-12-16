@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -15,6 +16,7 @@ import java.io.IOException;
 
 public class ReportDriver extends AppCompatActivity {
     EditText ePlateNum, eViolation, eStatement;
+    TextView eName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,12 @@ public class ReportDriver extends AppCompatActivity {
         ePlateNum = findViewById(R.id.etPlateNum);
         eViolation = findViewById(R.id.etViolation);
         eStatement = findViewById(R.id.etStatement);
+        eName  = findViewById(R.id.txtname);
+
+
+        SharedPreferences pref1 = getSharedPreferences("name", MODE_PRIVATE);
+        String name = pref1.getString("name", null);
+        eName.setText("Hello, " + name);
 
         SharedPreferences pref = getSharedPreferences("Page1", MODE_PRIVATE);
         String platenumber = pref.getString("plate", null);
@@ -48,6 +56,7 @@ public class ReportDriver extends AppCompatActivity {
         editor.putString("violation", violation);
         editor.putString("statement", statement);
         editor.commit();
+
 
         Intent i = new Intent(this, ReportDriver2.class);
         startActivity(i);

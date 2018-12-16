@@ -26,7 +26,8 @@
         <activity android:name=".SignUp" />
         <activity android:name=".ReportDriver" />
         <activity android:name=".ReportDriver2" />
-        <activity android:name=".ReportDriver3"></activity>
+        <activity android:name=".ReportDriver3" />
+        <activity android:name=".activity_home"></activity>
     </application>
 
 </manifest>

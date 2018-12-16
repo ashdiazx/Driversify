@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -26,6 +27,8 @@ import java.io.IOException;
 public class ReportDriver2 extends AppCompatActivity {
     EditText ePlateNum, eViolation, eStatement;
     ImageView img;
+    TextView eName;
+    Button btnPhoto;
 
     private final int PICK_IMAGE_REQUEST = 71;
 
@@ -37,12 +40,12 @@ public class ReportDriver2 extends AppCompatActivity {
         eViolation = findViewById(R.id.etViolation);
         eStatement = findViewById(R.id.etStatement);
         img = findViewById(R.id.imgReport);
-//        btnChoose.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                choosePhoto();
-//            }
-//        });
+
+        eName = findViewById(R.id.txtname);
+
+        SharedPreferences pref1 = getSharedPreferences("name", MODE_PRIVATE);
+        String name = pref1.getString("name", null);
+        eName.setText("Hello, " + name);
     }
 
     public void next(View v){
